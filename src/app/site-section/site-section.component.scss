@@ -1,0 +1,50 @@
+@import '../../sass/_variables';
+.section {
+    width: 100%;
+    background: $gray-background;
+    border: solid 1px $gray-background-border;
+    border-right: 0;
+    border-left: 0;
+    .container {
+        padding: 40px 20px;
+        @media only screen and (max-device-width: 736px) {
+            padding: 10px 30px;
+        }
+        .row {
+            &>div {
+                padding: 10px 0px;
+                .icon {
+                    color: $icon-default-color;
+                    float: left;
+                    padding-right: 10px;
+                }
+                .wrapper {
+                    padding-right: 30px;
+                    float: left;
+                    .title {
+                        color: $font-color-light;
+                    }
+                    .value {
+                        color: $font-color-bold;
+                        font-size: 17px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .sector {}
+        .sport-type {}
+        .mode {}
+        .responsability {
+            .icon {
+                color: $green;
+            }
+            float: right;
+            .sub-title {
+                font-weight: bold;
+                font-size: 17px;
+                color: $green;
+            }
+        }
+    }
+}

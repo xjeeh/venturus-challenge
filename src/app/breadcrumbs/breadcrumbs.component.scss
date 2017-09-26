@@ -1,0 +1,20 @@
+@import '../../sass/_variables';
+.breadcrumbs {
+    color: $green;
+    overflow: auto;
+    font-weight: bold;
+    zoom: 1;
+    padding: 10px 0px;
+    .item {
+        float: left;
+        font-size: 14px;
+        width: 100px;
+        text-align: center;
+        &.current {
+            color: $font-color-light;
+        }
+    }
+    .home {
+        width: 20px;
+    }
+}

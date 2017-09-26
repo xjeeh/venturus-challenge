@@ -1,0 +1,19 @@
+@import '../../sass/_variables';
+footer {
+    width: 100%;
+    border-top: solid 1px $black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $font-color-light;
+    .app-name {
+        text-align: left;
+    }
+    .version {
+        text-align: right;
+    }
+    @media only screen and (max-device-width: 736px) {
+        .row>div {
+            text-align: center;
+        }
+    }
+}

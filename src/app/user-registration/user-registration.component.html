@@ -1,0 +1,60 @@
+<div class="user-registration container">
+
+  <form class="row" #myForm="ngForm" (ngSubmit)="addItem(myForm.value)">
+
+    <div class="col-xs-12 title">
+      <h1>User registration</h1>
+    </div>
+
+    <div class="col-xs-12 col-md-6 field fullname">
+      <span class="title">Full name</span>
+      <input type="text" [(ngModel)]="user.fullname" name="fullname">
+    </div>
+
+    <div class="col-xs-12 col-md-6 field ride-in-group">
+      <span class="title">Ride in group?</span>
+
+      <div class="options">
+        <div class="option" *ngFor="let option of options.rideInGroup" (click)="checkRide(option)">
+          <div class="custom-input radio" [ngClass]="{'checked' : user.rideInGroup == option.value}">
+            <i class="fa fa-circle"></i>
+          </div>
+          <span>{{option.description | titlecase }}</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-xs-12 col-md-6 field email">
+      <span class="title">E-mail</span>
+      <input type="email" [(ngModel)]="user.email" name="email" />
+
+    </div>
+
+    <div class="col-xs-12 col-md-6 field days-of-week">
+      <span class="title">Days of the week</span>
+
+      <div class="options row">
+        <div class="option col-xs-6 col-md-2" *ngFor="let option of options.daysOfWeek" (click)="checkDay(option.value)">
+          <div class="custom-input checkbox" [ngClass]="{'checked' : user.daysOfWeek?.indexOf(option.value) >= 0}">
+            <i class="fa fa-check"></i>
+          </div>
+          <span>{{option.description | titlecase}}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-12 col-md-6 field city">
+      <span class="title">City <span class="optional">optional</span></span>
+      <input type="text" [(ngModel)]="user.city" name="city" />
+    </div>
+
+    <div class="col-xs-12 col-md-6 field options">
+      <button type="submit" class="save">Save</button>
+      <button (click)="clear()" type="button" class="cancel">Cancel</button>
+    </div>
+
+  </form>
+</div>

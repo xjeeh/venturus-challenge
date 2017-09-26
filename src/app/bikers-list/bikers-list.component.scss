@@ -1,0 +1,62 @@
+@import '../../sass/_variables';
+.bikers {
+    .title {
+        margin-top: 100px;
+    }
+    .wrapper {
+        overflow: auto;
+        margin-bottom: 100px;
+        .list {
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            border-collapse: collapse;
+            thead {
+                th {
+                    background: $green;
+                    color: white;
+                    padding: 20px 10px;
+                }
+            }
+            tbody {
+                tr {
+                    &:hover {
+                        background: $light-green;
+                        .remove {
+                            i {
+                                display: block;
+                            }
+                        }
+                    }
+                    td {
+                        color: $font-color-bold;
+                        font-weight: bold;
+                        padding: 10px;
+                        .time {
+                            color: $font-color-light;
+                            font-weight: normal;
+                        }
+                        &.remove {
+                            min-width: 150px;
+                            i {
+                                display: none;
+                                float: right;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .empty {
+        background: #F0F0F0;
+        color: #777777;
+        border: solid 1px #DBDBDB;
+        border-radius: 5px;
+        padding: 10px 15px;
+        text-align: center;
+        margin: 40px 0px;
+        font-weight: bold;
+    }
+}

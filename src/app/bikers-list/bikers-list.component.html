@@ -1,0 +1,45 @@
+<div class="bikers container">
+
+  <h1 class="title">Bikers</h1>
+
+  <div class="wrapper">
+    <table class="list" *ngIf="userService.users.length">
+      <thead>
+        <tr>
+          <th>Full name</th>
+          <th>Email</th>
+          <th>City</th>
+          <th>Ride in group</th>
+          <th>Days of week</th>
+          <th>Registration day</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of userService.users">
+          <td>{{user.fullname}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.city}}</td>
+          <td>{{rideInGroupFormatted(user.rideInGroup)}}</td>
+          <td>{{daysOfWeekFormatted(user.daysOfWeek)}}</td>
+          <td>
+            <span>{{user.registrationDate | date : 'MM/dd/yyyy'}}</span>
+            <span class="time">{{user.registrationDate | date : 'HH:mm:ssa'}}</span>
+          </td>
+          <td class="remove"><i class="fa fa-trash-o" (click)="removeItem(user)"></i></td>
+        </tr>
+
+
+      </tbody>
+
+    </table>
+  </div>
+
+  <!-- @Annotation: This functionality wasn't listed at the layout but I proficiently created it ;) -->
+  <div class="empty" *ngIf="!userService.users.length">
+    <span>No registered bikers.</span> <br/>
+    <span>Register a new one in the form above.</span>
+  </div>
+
+</div>

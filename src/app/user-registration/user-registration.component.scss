@@ -1,0 +1,119 @@
+@import '../../sass/_variables';
+.user-registration {
+    input[type='text'],
+    input[type='email'] {
+        width: 100%;
+        border-radius: 5px;
+        height: 40px;
+        outline: none;
+        padding: 0px 10px;
+        border: solid 1.6px rgba(218, 218, 218, 0.97);
+        box-sizing: border-box;
+        max-width: 500px;
+        &:focus {
+            border-color: $green;
+        }
+    }
+    .field {
+        .title {
+            font-weight: bold;
+            color: $font-color-bold;
+            width: 100%;
+            float: left;
+            margin: 20px 0px 10px 0px;
+            max-width: 500px;
+            .optional {
+                float: right;
+                color: $font-color-light;
+                font-size: 12px;
+            }
+        }
+        .options {
+            overflow: auto;
+            zoom: 1;
+            float: left;
+            .option {
+                margin-top: 10px;
+                cursor: pointer;
+                float: left;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                &:hover {
+                    .custom-input {
+                        border-color: $green;
+                    }
+                }
+                span {
+                    margin-right: 15px;
+                }
+                .custom-input {
+                    width: 28px;
+                    height: 28px;
+                    float: left;
+                    border: solid 1.5px #DADADA;
+                    box-sizing: border-box;
+                    margin-right: 10px;
+                    i {
+                        display: none;
+                        position: absolute;
+                        font-size: 12px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate3d(-50%, -50%, 0);
+                    }
+                    &.checked {
+                        i {
+                            display: block;
+                        }
+                        border-color: $green;
+                    }
+                    &.radio {
+                        border-radius: 50%;
+                        position: relative;
+                    }
+                    &.checkbox {
+                        border-radius: 5px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+    .email {
+        align-self: center;
+    }
+    .options {
+        align-self: flex-end;
+        @media only screen and (max-device-width: 736px) {
+            padding-top: 20px;
+        }
+        button {
+            width: 100px;
+            padding: 10px 0px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 10px;
+            float: right;
+            outline: none;
+            cursor: pointer;
+            &.cancel {
+                background: $button-primary-bg;
+                color: $button-primary-color;
+            }
+            &.save {
+                background: $button-success-bg;
+                color: $button-success-color;
+            }
+            &:active {
+                background: $button-primary-color;
+                color: $button-primary-bg;
+            }
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}

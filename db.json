@@ -1,0 +1,80 @@
+﻿{
+  "users": [
+    {
+      "fullname": "James Isaac Neutron",
+      "email": "neutron@example.com",
+      "city": "Campinas",
+      "rideInGroup": 0,
+      "daysOfWeek": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "registrationDate": 1506374740489
+    },
+    {
+      "fullname": "Carl Wheezer",
+      "email": "carl@example.com",
+      "city": "Campinas",
+      "rideInGroup": 1,
+      "daysOfWeek": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "registrationDate": 1506374740489
+    },
+    {
+      "fullname": "Cindy Vortex",
+      "email": "cindyvortex@example.com",
+      "city": "São Paulo",
+      "rideInGroup": 2,
+      "daysOfWeek": [
+        0,
+        6
+      ],
+      "registrationDate": 1506374740489
+    },
+    {
+      "fullname": "Sheen Estevez",
+      "email": "sheen@example.com",
+      "city": "São Paulo",
+      "rideInGroup": 1,
+      "daysOfWeek": [
+        1,
+        3,
+        5
+      ],
+      "registrationDate": 1506374740489
+    },
+    {
+      "fullname": "Libby Folfax",
+      "email": "folfax2014@example.com",
+      "city": "São Paulo",
+      "rideInGroup": 1,
+      "daysOfWeek": [
+        1,
+        2,
+        3
+      ],
+      "registrationDate": 1506374740489
+    },
+    {
+      "fullname": "Nick Dean",
+      "email": "nickd@example.com",
+      "city": "Sumaré",
+      "rideInGroup": 0,
+      "daysOfWeek": [
+        5,
+        6
+      ],
+      "registrationDate": 1506374740489
+    }
+  ]
+}

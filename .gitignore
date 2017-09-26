@@ -6,7 +6,10 @@
 /out-tsc
 
 # dependencies
+package-lock.json
+node_modules
 /node_modules
+
 
 # IDEs and editors
 /.idea
